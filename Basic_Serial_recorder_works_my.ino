@@ -17,17 +17,9 @@ const int sdPin = 4; //real pin 5 SSPIN!!!
 int sdcardLED = 13;
 int actLED = 14;
 const int buttonPin = 1;
-SoftwareSerial mySerial(10, 11); // RX, TX
+SoftwareSerial mySerial(10, 11); // RX, TX on ATMEGA 644 port 10 and port 11
 
-/*ATMEGA168 pins
-const int sdPin = 10; //real pin 16
-int sdcardLED = 8;  //real pin 14
-int actLED = 9; //real pin 15
-const int buttonPin = 7; //real pin 13
-SoftwareSerial mySerial(4, 5); // RX, TX pin 4 and 5
-*/
-
-LiquidCrystal_I2C lcd(0x3F,20,4);
+LiquidCrystal_I2C lcd(0x3F,20,4); //Check LCD i2C address 0x3F is mine
 
 byte byteRead;
 int oldfilenumber = 0;
