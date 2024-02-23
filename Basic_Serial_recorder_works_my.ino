@@ -1,3 +1,10 @@
+//Simple serial port logger
+//SD CARD module connecting to MOSI, MISO, SCK, and SS PINS
+// SDCARD LED ATMEGA PIN port 13 ---- 680Ohm RESISTOR ---- GND
+// ACT LED ATMEGA PIN port 14 ------ 680Ohm RESISTOR ---- GND
+// PUSH BUTTON ATMEGA port 1 ----- GND
+// I2C liquid Crystal LCD ATMEGA SDA/SCL
+
 // SPI and SD libraries. SPI for connecting SD card to SPI bus.
 #include <SPI.h>
 #include <Wire.h>
@@ -6,7 +13,7 @@
 #include <LiquidCrystal_I2C.h>
 
 //ATMEGA644 pins
-const int sdPin = 4; //real pin 5
+const int sdPin = 4; //real pin 5 SSPIN!!!
 int sdcardLED = 13;
 int actLED = 14;
 const int buttonPin = 1;
